@@ -11,7 +11,8 @@ export default function ContactDetails() {
           Other Ways To Contact Me
         </h2>
         <p className="text-gray-300 mt-2">
-          Feel free to reach out anytime — I’m always open to new opportunities!
+          Feel free to reach out anytime — I’m always open to new
+          opportunities!🤗🤗
         </p>
       </div>
 
