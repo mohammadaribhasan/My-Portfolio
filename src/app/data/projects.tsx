@@ -1,11 +1,12 @@
-import job-track from "../../public/job-track.png";
-import serve-circle from "../../public/serve-circle.png";
-import task-crowd from "../../public/task-crowd.png";
+import jobTrack from "../../public/job-track.png";
+import serveCircle from "../../public/serve-circle.png";
+import taskCrowd from "../../public/task-crowd.png";
+
 export const PROJECTS = [
   {
     id: "ServeCicle",
     name: "ServCicle — Volunteer Platform",
-    image: serve-circle,
+    image: serveCircle,
     stack: ["React", "Tailwind", "Express", "Firebase Auth", "MongoDB"],
     description:
       "An event creation and joining platform with past-event archival, filters, and user dashboards. I focused on UX for mobile-first interactions.",
@@ -18,7 +19,7 @@ export const PROJECTS = [
   {
     id: "JobTrack",
     name: "JobTrack — Job Listing Platform",
-    image: job-track, // TODO
+    image: jobTrack,
     stack: ["React", "Tailwind", "Firebase Auth", "Express", "MongoDB"],
     description:
       "A job listing and application platform with company dashboards, dynamic routes admin permission , comment report ,admin review , and role-based access. Built with responsiveness and accessibility in mind.",
@@ -32,7 +33,7 @@ export const PROJECTS = [
   {
     id: "TaskCrowd",
     name: "TaskCrowd — Hiring platform",
-    image: task-crowd, // TODO
+    image: taskCrowd,
     stack: ["React", "Tailwind", "Firebase Auth", "Express", "MongoDB"],
     description:
       "A job hiring and application platform with company dashboards, dynamic routes, and role-based access. Built with responsiveness and accessibility in mind.",

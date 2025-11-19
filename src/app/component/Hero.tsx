@@ -24,13 +24,11 @@ export default function Hero() {
           initial={{ scale: 0.95, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 0.6 }}
-          className="order-1 lg:order-2 w-40 h-40 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-80 lg:h-80 rounded-2xl overflow-hidden shadow-2xl border border-white/30 flex-shrink-0"
+          className="order-1 lg:order-2 w-40 h-40 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-80 lg:h-80 rounded-2xl overflow-hidden flex-shrink-0"
         >
           <Image
             src={USER.photo}
             alt="Profile"
-            width={320}
-            height={320}
             className="w-full h-full object-cover"
             onError={(e) => {
               (e.currentTarget as HTMLImageElement).src =

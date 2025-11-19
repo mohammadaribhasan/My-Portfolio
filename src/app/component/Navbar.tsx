@@ -6,12 +6,12 @@ import { USER } from "../data/user";
 import Icon from "./Icon";
 import Link from "next/link";
 import Image from "next/image";
-import img from "../../../public/arib-img.jpeg";
+
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement | null>(null);
 
-  // Close menu on outside click
+  // Close mobile menu on outside click
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
       if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
@@ -22,55 +22,57 @@ export default function Navbar() {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  const sections: string[] = ["home", "about", "skills", "projects", "contact"];
+  const sections = ["home", "about", "skills", "projects", "contact"];
 
   return (
     <nav className="bg-[#071014]/60 backdrop-blur sticky top-0 z-40 border-b border-gray-800">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16 items-center">
+          {/* Logo */}
           <Link href="/" className="flex items-center gap-3">
             <Image
-              src={img}
-              alt="Professional portrait"
-              width={500}
-              height={500}
+              src="https://i.ibb.co/fWV1FVC/unnamed-removebg-preview.png"
+              alt="logo"
+              width={100}
+              height={100}
+              className="h-20 w-20"
+              priority
             />
           </Link>
 
-          {/* Desktop Links */}
+          {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-6">
             {sections.map((section) => (
               <motion.a
                 key={section}
                 href={`#${section}`}
-                className="hover:text-emerald-600"
+                className="hover:text-emerald-600 transition"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
                 {section.charAt(0).toUpperCase() + section.slice(1)}
               </motion.a>
             ))}
+
             <Link
               href={USER.linkedin}
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               className="flex items-center gap-2 text-sm px-3 py-2 rounded-md hover:border-emerald-200"
             >
-              <Icon name="linkedin" />{" "}
+              <Icon name="linkedin" />
               <span className="hidden sm:inline">LinkedIn</span>
             </Link>
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="md:hidden">
-            <button
-              onClick={() => setOpen(!open)}
-              aria-label="menu"
-              className="p-2 rounded-md"
-            >
-              <Icon name="menu" />
-            </button>
-          </div>
+          <button
+            onClick={() => setOpen((prev) => !prev)}
+            aria-label="Toggle Menu"
+            className="md:hidden p-2 rounded-md"
+          >
+            <Icon name="menu" />
+          </button>
         </div>
 
         {/* Mobile Menu */}
@@ -81,14 +83,25 @@ export default function Navbar() {
                 <motion.a
                   key={section}
                   href={`#${section}`}
-                  className="hover:text-emerald-600"
+                  className="hover:text-emerald-600 transition"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  onClick={() => setOpen(false)} // close on link click
+                  onClick={() => setOpen(false)}
                 >
                   {section.charAt(0).toUpperCase() + section.slice(1)}
                 </motion.a>
               ))}
+
+              <Link
+                href={USER.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-sm pt-2"
+                onClick={() => setOpen(false)}
+              >
+                <Icon name="linkedin" />
+                LinkedIn
+              </Link>
             </div>
           </div>
         )}

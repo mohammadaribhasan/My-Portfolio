@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import ContactForm from "./ContactForm";
+import ContactDetails from "./ContactDetails";
 
 export default function Contact() {
   return (
@@ -18,6 +19,7 @@ export default function Contact() {
       >
         <h2 className="text-4xl font-bold text-green-400 mb-8">Contact Me</h2>
         <ContactForm />
+        <ContactDetails />
       </motion.div>
     </section>
   );
