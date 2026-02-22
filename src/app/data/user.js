@@ -2,7 +2,7 @@ import img from "../../../public/arib-img.png";
 
 export const USER = {
   name: "Mohammad Arib Hasan",
-  designation: "Frontend Web Developer",
+  designation: "Full-stack Developer",
   email: "mohammadaribhasan@gmail.com",
   phone: "+8801859068689",
   linkedin: "https://www.linkedin.com/in/mohammadaribhasan/",

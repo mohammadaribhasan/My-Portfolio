@@ -29,7 +29,7 @@ export default function ContactDetails() {
       >
         {/* Phone */}
         <a
-          href="tel:+8801859068689"
+          href="tel:+8801521757701"
           className="flex items-center gap-5 text-xl group"
         >
           <div
@@ -39,7 +39,7 @@ export default function ContactDetails() {
             <FiPhone className="text-green-400 text-3xl" />
           </div>
           <span className="group-hover:text-green-400 transition">
-            +880 1859068689
+            +880 1521757701
           </span>
         </a>
 

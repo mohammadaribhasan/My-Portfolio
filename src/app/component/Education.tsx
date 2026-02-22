@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 type EducationItem = {
   id: number;
@@ -29,10 +30,10 @@ const education: EducationItem[] = [
     title: "Programming Hero Level 1 Course",
     year: "2025",
     description: [
-      "Completed Level 1 course from Programming Hero, covering fundamentals of programming, JavaScript basics, HTML & CSS, and introductory React.",
-      "Gained hands-on experience building small projects and interactive web pages. Strengthened skills in responsive design and component-based UI development.",
+      "Completed Level 1 course from Programming Hero, covering fundamentals of programming, JavaScript , HTML & CSS, and React.",
+      "Gained hands-on experience building projects and interactive web pages. Strengthened skills in responsive design and component-based UI development.",
     ],
-    note: "(Certification and projects available on request.)",
+    note: "Certificate",
     initialX: 40,
     delay: 0.35,
   },
@@ -70,7 +71,15 @@ export default function Education() {
               </p>
             ))}
             {item.note && (
-              <p className="mt-3 italic text-gray-500">{item.note}</p>
+              <Link
+                href={
+                  "https://drive.google.com/file/d/1SwDnSjLdy_QXBtmE4COGCnC0IwAJ0Yn9/view?usp=sharing"
+                }
+                target="_blank"
+                className="mt-3 text-green-400 font-semibold italic hover:underline inline-block transform transition hover:scale-105"
+              >
+                {item.note}
+              </Link>
             )}
           </motion.div>
         ))}

@@ -47,23 +47,18 @@ export default function Hero() {
           {/* Buttons */}
           <div className="mt-6 flex flex-wrap justify-center lg:justify-start gap-3">
             <a
+              className="inline-flex cursor-pointer items-center px-4 sm:px-5 py-2.5 sm:py-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-semibold shadow transition-transform hover:scale-[1.02]"
               href="https://drive.google.com/file/d/1v1PGJNwazYpBjBl0uoLws_WwggN0WA0s/view?usp=sharing"
               target="_blank"
             >
-              <button className="inline-flex cursor-pointer items-center px-4 sm:px-5 py-2.5 sm:py-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-semibold shadow transition-transform hover:scale-[1.02]">
-                Download Resume
-              </button>
+              Visit My Resume
             </a>
-          </div>
-
-          {/* Social Icons */}
-          <div className="mt-6 flex justify-center lg:justify-start items-center gap-3">
             <a
               href={USER.github}
               target="_blank"
               rel="noreferrer"
               title="GitHub"
-              className="p-2 rounded-md border border-white/30 hover:bg-white/10 transition"
+              className="px-4 sm:px-5 py-2.5 sm:py-3 rounded-xl rounded-md border border-white/30 hover:bg-white/10 transition-transform hover:scale-[1.02] inline-flex items-center justify-center text-white font-semibold shadow"
             >
               <Icon name="github" />
             </a>
@@ -72,11 +67,14 @@ export default function Hero() {
               target="_blank"
               rel="noreferrer"
               title="LinkedIn"
-              className="p-2 rounded-md border border-white/30 hover:bg-white/10 transition"
+              className="px-4 sm:px-5 py-2.5 sm:py-3 rounded-xl rounded-md border border-white/30 hover:bg-white/10 transition-transform hover:scale-[1.02] inline-flex items-center justify-center text-white font-semibold shadow"
             >
               <Icon name="linkedin" />
             </a>
           </div>
+
+          {/* Social Icons */}
+          <div className="mt-6 flex justify-center lg:justify-start items-center gap-3"></div>
         </motion.div>
       </div>
     </header>

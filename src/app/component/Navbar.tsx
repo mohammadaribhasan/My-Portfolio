@@ -58,7 +58,7 @@ export default function Navbar() {
               href={USER.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 text-sm px-3 py-2 rounded-md hover:border-emerald-200"
+              className="flex items-center gap-2 text-sm px-3 py-2 rounded-md hover:border-emerald-200 rounded-xl transition courser-pointer  border border-white/30 hover:bg-white/10"
             >
               <Icon name="linkedin" />
               <span className="hidden sm:inline">LinkedIn</span>
@@ -96,7 +96,7 @@ export default function Navbar() {
                 href={USER.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 text-sm pt-2"
+                className="flex items-center gap-2 text-sm pt-2 rounded-xl hover:border-emerald-200 "
                 onClick={() => setOpen(false)}
               >
                 <Icon name="linkedin" />
