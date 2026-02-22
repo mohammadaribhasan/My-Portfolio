@@ -6,13 +6,6 @@ import { USER } from "../data/user";
 import Icon from "./Icon";
 
 export default function Hero() {
-  const handleDownloadClick = () => {
-    const link = document.createElement("a");
-    link.href = "/Mohammad_Arib_Hasan_Resume.pdf"; // must be inside /public folder
-    link.download = "Mohammad_Arib_Hasan_Resume.pdf";
-    link.click();
-  };
-
   return (
     <header
       id="home"
@@ -30,10 +23,6 @@ export default function Hero() {
             src={USER.photo}
             alt="Profile"
             className="w-full h-full object-cover"
-            onError={(e) => {
-              (e.currentTarget as HTMLImageElement).src =
-                "https://i.ibb.co.com/TB6h4CMd/a-professional-studio-portrait-of-a-youn-Jwoi-Pq-UCT2-GOGHHU4-S1-Tdg-Wss-S1bf-IR6-Wq-C9-O1-WUWeo-Q.jpg";
-            }}
           />
         </motion.div>
 
@@ -57,20 +46,13 @@ export default function Hero() {
 
           {/* Buttons */}
           <div className="mt-6 flex flex-wrap justify-center lg:justify-start gap-3">
-            <button
-              onClick={handleDownloadClick}
-              className="inline-flex cursor-pointer items-center px-4 sm:px-5 py-2.5 sm:py-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-semibold shadow transition-transform hover:scale-[1.02]"
-            >
-              Download Resume
-            </button>
-
             <a
-              href={USER.portfolio}
+              href="https://drive.google.com/file/d/1v1PGJNwazYpBjBl0uoLws_WwggN0WA0s/view?usp=sharing"
               target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center px-4 sm:px-5 py-2.5 sm:py-3 rounded-xl border border-white/30 text-white font-medium hover:bg-white/10 transition"
             >
-              Visit Portfolio
+              <button className="inline-flex cursor-pointer items-center px-4 sm:px-5 py-2.5 sm:py-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-semibold shadow transition-transform hover:scale-[1.02]">
+                Download Resume
+              </button>
             </a>
           </div>
 
