@@ -1,6 +1,8 @@
 # My Portfolio Website 🌐
 
-[Live Link](https://mohammadaribhasan.vercel.app/)
+<a href="https://mohammadaribhasan.vercel.app/" target="_blank" rel="noopener noreferrer">
+Visit My Portfolio
+</a>
 
 Welcome to the repository for my personal portfolio website. This project serves as an online presence where I highlight my professional experience, showcase selected projects, list technical skills, and provide a way for visitors to get in touch.
 
