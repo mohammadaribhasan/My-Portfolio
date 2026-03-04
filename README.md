@@ -6,7 +6,7 @@ Visit My Portfolio
 
 Welcome to the repository for my personal portfolio website. This project serves as an online presence where I highlight my professional experience, showcase selected projects, list technical skills, and provide a way for visitors to get in touch.
 
-## 🚀 Overview
+## Overview
 
 The site is built with **Next.js 14** using the App Router and TypeScript for type safety. Styling is handled with Tailwind CSS, and the layout is fully responsive across devices. Content is organized into components within the `src/app/component` directory, with sample data stored in `src/app/data`.
 
@@ -18,7 +18,7 @@ Key pages include:
 - **Skills** – a visual display of technologies I use.
 - **Contact** – form and contact details to reach me.
 
-## 🛠️ Features
+## Features
 
 - Modern Next.js 14 App Router structure
 - TypeScript throughout the codebase
